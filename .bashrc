@@ -38,7 +38,7 @@ alias egrep='egrep --color=auto'
 
 # Platform specific settings
 
-elif [[ $platform == 'linux' || $platform == 'unknown' ]]; then
+if [[ $platform == 'linux' || $platform == 'unknown' ]]; then
     PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
     alias ls='ls --color=auto'
@@ -67,7 +67,7 @@ elif [[ $platform == 'linux' || $platform == 'unknown' ]]; then
     export LC_NUMERIC="en_US.UTF-8"
     export LC_TIME="en_US.UTF-8"
     # export LC_ALL=
-    export LC_ALL="en_US.UTF-8"
+    # export LC_ALL="en_US.UTF-8"
 
 
     # Check if WAYLAND, and set proper env variables
